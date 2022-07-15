@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { Fragment as div } from 'react';
 
-export default function List() {
+export default function List(props: any) {
+  const meals = props.meals; 
+
+  const listItems = meals.map((d: any) => <div className='w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white' key={d.name}>{d.name}</div>);
+
+  return (
+    <div>
+    {listItems}
+    </div>
+  );
+
   return (
     <div className='w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white'>
       <a
