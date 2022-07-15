@@ -1,9 +1,10 @@
 import React from 'react';
+import Home from './pages/Home/Home';
 
 function App() {
   return (
-    <div>
-      <h1>Hello</h1>
+    <div className='container px-5 mx-auto'>
+      <Home />
     </div>
   );
 }
